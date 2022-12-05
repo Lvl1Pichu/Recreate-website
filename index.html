@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Länkade CSS-filer: -->
+    <link rel="stylesheet" type="text/css" href="css/buttons.css" />
+    <link rel="stylesheet" type="text/css" href="css/header.css" />
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Följande är flikikonen: -->
+    <link rel="icon" href="/images/Itslearning icon.png">
+        <!-- Följande är ikoner länkade från FontAwesome: -->
+    <script src="https://kit.fontawesome.com/d68ed4da9b.js" crossorigin="anonymous"></script>
+    <title>ItsLearning</title>
+</head>
+    <header>
+
+        <!-- En container där headern delas up i
+            vänster och höger för att underlätta stylingen.-->
+        <div class="top-menu">
+            <nav class="leftnav">
+                <!--  Här i den vänstra delen finns alla meny-alternativ.-->
+                <ul class="nav-left-options">
+                    <li class="logo-start">
+                        <a class="home" href="home">
+                            <!-- Logotypen förhåller sig alltid till vänster
+                                och är tillgänglig genom alla skärmstorlekar. -->
+                            <img class="itslogo"src="https://cdn.itslearning.com/v3.133.3.640/images/logo-badge.svg" alt="">
+                        </a>
+                        <!-- "Start & logotypen" ska ligga i samm a-tagg då de
+                            båda ska leda tillbaka till startsidan. (Ej aktiv!) Jag valde att ha den
+                            utanför a-taggen eftersom det ser estetiskt bättre ut. -->
+                        <span id="nav-font" class="start">Start</span>
+                        <div class="active-shadow"></div>
+
+                        <!-- I mobilt läge dyker denna meny-ikonet upp.
+                            Den ska fälla ut en dropdown med fler alternativ. -->
+                        <div class="mobile-burger">
+                            <div class="burger"></div>
+                            <div class="burger"></div>
+                            <div class="burger"></div>
+                        </div>
+                        <span id="nav-font" class="nav-menu"> Meny </span>
+                    </li>
+                   
+                    <li>
+                        <button class="navkurserbtn">
+                            <span id="nav-font"> Kurser</span>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Höger sida -->
+
+            <nav class="rightnav">
+                <ul class="nav-right-options">
+                    <li class="bell">
+                        <!-- Här presenteras en notifikation-funktion som ska fälla ut
+                            ytterligare en dropdown.(Ej aktiv!) Den har dock en hover-funktion.
+                            Jag valde att använda ett ikon från FontAwesome
+                            istället för samma 'src' som orginalet. -->
+                        <button class="bell-btn">
+                            <i class="fa-solid fa-bell fa-xl"></i>
+                        </button>
+                    </li>
+
+                    <li class="user">
+                        <!-- Denna button-funktion ska fälla ut en dropdown. (Ej aktiv!)-->
+                        <button class="user-btn">
+                            <span class="logo-user">
+                                <img class="profilepic"src="https://cdn.itslearning.com/v3.133.3.640/icons/generic_user_icon_64.png" alt="">
+                                <!-- Namnet på inloggad användare syns inte i mobilt- men följer med genom tablet -->
+                                <span class="username" id="nav-font">Hernvall, Linus</span>
+                            </span>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <nav class="nav-container">
+        <!--Följande div är en parent och innhåller båda knapparna ni ser i <nav>-baren.
+            För att kunna hantera båda knapparna separat,
+            placeras de i varsin <div> och tilldelas egna klasser.
+            Stylingen ser ni mer i css-filen.-->
+                <div class="container-btns">
+
+                    <div class="container-kurser">
+                        <button class="kurser-btn">Kurser</button>
+                    </div>
+
+                    <div class="container-uppdateringar">
+                        <button class="uppdateringar-btn">Uppdateringar</button>
+                    </div>
+                </div>
+            </nav>
+<main>
+
+<div class="coursecards-group-starred">
+    <div class="kurskort-header">
+        <h2>Stjärnmarkerade kurser</h2>
+                <label class="search-input" >
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text", id="search-input", placeholder="Sök efter kurs">
+                    <i class="fa-solid fa-arrow-down-wide-short"></i>
+                </label>
+
+                <div class="dropdown-meny">
+                    <p class="dropdown-text"> Senast uppdaterad</p>
+                </div>
+                <span><i class="fa-solid fa-caret-down"></i></span>
+    </div>
+
+    <!-- Nedan skapar titeln "Stjärnmarkerade kurser", en searchbar för att söka upp kurser
+             samt en span som visar samma text som våra screenshots på hemsidan. 
+            Dropdown-menyn som används på hemsidan har ett eget stylesheet, därför valde vi att göra såhär
+        istället.-->
+
+    <div class="container-coursecards">
+
+    <ul class="course-item-box">
+        <li class="course-item">
+            <div class="coursecard yellow">
+                <a class="coursecard-main">
+                    <span class="coursecard-title">FED22G - Kompetensportfölj och Entrepenörskap
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+
+                    <span class="coursecard-lastupdated">Uppdaterad 2022-09-14</span>
+                    <div class="coursecard__teachers">
+                        <section class="prom-multi-avatar"></section>
+                        <div class="coursecard-spacer"></div>
+                    </div>
+                </a>
+            </div>
+        </li>
+
+    <!--Kod som skapar själva kurskorten. Ordningen är väldigt viktig för att CSS och layout
+ska passa. Klasserna är också alla kopplade till egen CSS.-->
+        <li class="course-item">
+            <div class="coursecard purple">
+                <a class="coursecard-main">
+                    <span class="coursecard-title">MI - Utvärderingar 22/23
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+
+                    <span class="coursecard-lastupdated">Uppdaterad 2022-09-14</span>
+                    <div class="coursecard__teachers">
+                        <section class="prom-multi-avatar"></section>
+                        <div class="coursecard-spacer"></div>
+                    </div>
+                </a>
+            </div>
+        </li>
+
+<!--Copy-paste av kurskorten då alla har samma struktur. Vissa har en annan klass på den första diven för att
+bakgrundsfärgen kan vara olika.-->
+        <li class="course-item">
+            <div class="coursecard yellow">
+                <a class="coursecard-main">
+                    <span class="coursecard-title">FED22G - HTML och CSS, 20 yhp
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+
+                    <span class="coursecard-lastupdated">Uppdaterad 2022-09-13</span>
+                    <div class="coursecard__teachers">
+                        <section class="prom-multi-avatar"></section>
+                        <div class="coursecard-spacer"></div>
+                    </div>
+                </a>
+            </div>
+        </li>
+
+
+
+        <li class="course-item">
+            <div class="coursecard yellow">
+                <a class="coursecard-main">
+                    <span class="coursecard-title">FED22G - Arbetsmetodik för Utvecklare, 20 yhp
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+
+                    <span class="coursecard-lastupdated">Uppdaterad 2022-06-29</span>
+                    <div class="coursecard__teachers">
+                        <section class="prom-multi-avatar"></section>
+                        <div class="coursecard-spacer"></div>
+                    </div>
+                </a>
+            </div>
+        </li>
+
+
+
+        <li class="course-item">
+            <div class="coursecard yellow">
+                <a class="coursecard-main">
+                    <span class="coursecard-title">FED22G - Grafiska verktyg for Gränssnittsdesign
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+
+                    <span class="coursecard-lastupdated">Uppdaterad 2022-06-29</span>
+                    <div class="coursecard__teachers">
+                        <section class="prom-multi-avatar"></section>
+                        <div class="coursecard-spacer"></div>
+                    </div>
+                </a>
+            </div>
+        </li>
+
+        <li class="course-item">
+            <div class="coursecard yellow">
+                <a class="coursecard-main">
+                    <span class="coursecard-title">FED22G - Dynamisk Webbutveckling
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+
+                    <span class="coursecard-lastupdated">Uppdaterad 2022-06-29</span>
+                    <div class="coursecard__teachers">
+                        <section class="prom-multi-avatar"></section>
+                        <div class="coursecard-spacer"></div>
+                    </div>
+                </a>
+            </div>
+        </li>
+
+
+        <li class="course-item">
+            <div class="coursecard yellow">
+                <a class="coursecard-main">
+                    <span class="coursecard-title">FED22G - LIA2, 80 yhp
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+
+                    <span class="coursecard-lastupdated">Uppdaterad 2022-04-05</span>
+                    <div class="coursecard__teachers">
+                        <section class="prom-multi-avatar"></section>
+                        <div class="coursecard-spacer"></div>
+                    </div>
+                </a>
+            </div>
+        </li>
+
+
+        <li class="course-item">
+            <div class="coursecard brown">
+                <a class="coursecard-main">
+                    <span class="coursecard-title">FED22G - Examensarbete, 30 yhp
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+
+                    <span class="coursecard-lastupdated">Uppdaterad 2022-09-16</span>
+                    <div class="coursecard__teachers">
+                        <section class="prom-multi-avatar"></section>
+                        <div class="coursecard-spacer"></div>
+                    </div>
+                </a>
+            </div>
+        </li>
+
+    </ul>
+</div>
+</div>
+</main>
+</body>
+</html>
+

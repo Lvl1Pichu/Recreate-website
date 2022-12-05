@@ -1,0 +1,275 @@
+/*ÖVERGRIPANDE STYLING FÖR DOKUMENTET*/
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+main {
+	padding: 5px 0;
+}
+
+body {
+	background-image: linear-gradient(to bottom, #554F66 0%, #554F66 80px);
+	box-sizing: border-box;
+	font: normal 16px/1.5em "Open Sans",Helvetica,Arial,sans-serif;
+	height: 1500px;
+	width: 100%;
+	overflow-y: scroll;
+	display: block;
+}
+/*ÖVERGRIPANDE STYLING FÖR DOKUMENTET*/
+
+
+/*CSS-koden är strukturerad i en top-down ordning. dv.s det första elementet ligger högst upp.*/
+
+/*STYLING STJÄRNMARKERADE KURSER - SEARCHBAR - DROPDOWN MENY*/
+
+h2 {
+	font-size: 16px;
+	font-weight: 800;
+	margin-left: 2rem;
+	letter-spacing: 0em;
+	flex-grow: 3;
+}
+
+.coursecards-group-starred{
+	width: 100%;
+	margin: auto 40px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.kurskort-header {
+	align-items: center;
+	color: #fff;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 0 35px;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.search-input{
+	display: flex;
+}
+
+#search-input{
+	background-color: transparent;
+	border: 0;
+	border-bottom: 1px solid #a393a1;
+	color: white;
+	outline: none;
+	font-weight: 300;
+	padding: 10px 30px 0 0;
+	width: 156px;
+	margin: 0 40px 0 10px;
+}
+
+.fa-magnifying-glass{
+	background-size: 18px;
+	float: left;
+	height: 18px;
+	margin-right: 18px;
+	width: 22px;
+	font-size: 18px;
+	margin-top: 7px;
+}
+
+.fa-arrow-down-wide-short{
+	width: 22px;
+	height: 18px;
+	font-size: 18px;
+}
+
+.fa-caret-down{
+	float: right;
+	margin: 10px 10px 10px 15px;
+}
+
+.dropdown-meny{
+	display: flex;
+	align-items: center;
+	justify-content: space-between
+
+}
+.dropdown-text {
+	display: flex;
+	font-weight: bold;
+	font-size: 14px;
+	white-space: nowrap;
+	
+}
+
+.main-toolbar{
+	display: flex;
+}
+
+/*STYLING KURSKORT*/
+
+.course-item-box {
+	list-style-type: none;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.course-item {
+	margin: 10px;
+}
+
+.coursecard>.coursecard-main {
+	background-color: #cfcfcf;
+	border: 3px solid #554f66;
+	border-radius: 15px;
+	box-shadow: 0 0 0 4px transparent;
+	color: #333;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	height: 280px;
+	padding: 5px;
+	position: relative;
+	width: 290px;
+}
+
+.fa-star{
+	background-color: transparent;
+	opacity: 60%;
+	border: 3px solid transparent;
+	cursor: pointer;
+	height: 40px;
+	position: absolute;
+	right: 10px;
+	top: calc(15px + 3px);
+	width: 35px;
+	font-size: 1rem;
+}
+
+.coursecards>li {
+	display: inline-block;
+	font-size: 16px;
+	padding: 15px 15px 0;
+	vertical-align: middle;
+}
+
+.coursecard-title {
+	color: inherit;
+	display: -webkit-box;
+	font-size: 18px;
+	font-weight: 800;
+	line-height: 1.5;
+	max-height: 120px;
+	padding: 15px;
+	width: calc(100% - 38px);
+	word-wrap: break-word;
+}
+
+.coursecard-lastupdated {
+	display: block;
+	font-size: 12px;
+	line-height: 15px;
+	padding: 10px 15px 15px;
+}
+
+.coursecard-teachers {
+	align-items: center;
+	display: flex;
+	flex-grow: 0;
+	flex-shrink: 0;
+	font-weight: bold;
+	padding: 0 50px 15px 15px;
+}
+
+.coursecard.yellow>.coursecard-main {
+	background-color: #e5ebac;
+}
+
+.coursecard.brown>.coursecard-main {
+    background-color: #d7ccc8;
+}
+
+.coursecard.aqua>.coursecard-main {
+    background-color: #C4ECFF;
+}
+
+.coursecard.red>.coursecard-main {
+    background-color: #F8C7DE;
+}
+
+
+.coursecard.purple>.coursecard-main {
+    background-color: #CCD7FF;
+}
+
+/*MEDIA QUIERIES*/
+
+@media screen and (max-width: 600px){
+	.fa-arrow-down-wide-short{
+		display: block;
+		margin: 7px 10px 0 0;
+	}
+	.main-dropdown-meny{
+		display: none;
+	}
+	#search-input{
+		display: none;
+	}
+	.coursecard-spacer{
+		display: none;
+	}
+	.coursecard>.coursecard-main{
+		height: 180px;
+		width: 100% !important;
+		font-size: 16px;
+	}
+	.coursecard-lastupdated{
+		display: none;
+	}
+	.dropdown-text{
+		display: none;
+	}
+	.fa-caret-down{
+		display: none !important;
+	}
+	.course-item {
+		width: 100%;
+	}
+	.kurskort-header{
+		width: 100%;
+		padding: 0;
+	}
+}
+
+/*Styling för */
+@media screen and (min-width:600px){
+	.fa-arrow-down-wide-short {
+		display: none !important;
+	}
+}
+
+@media screen and (min-width: 675px) and (max-width: 1040px){	
+	
+	.coursecards-group-starred{
+		max-width: 640px;
+	}
+
+	h2{
+		margin-left: 0;
+	}
+
+	.coursecard-title{
+		font-size: 15px;
+	}
+
+	.fa-magnifying-glass{
+		margin-right: 0;
+	}
+	
+}
+
+	
+

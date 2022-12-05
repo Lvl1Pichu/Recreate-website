@@ -1,0 +1,196 @@
+/* Jag har försökt att skriva all css i kronologisk ordning så som
+    elementen presenteras som på orginalhemsidan.
+    */
+	#nav-font {
+		color: #b4b3bd;
+		font: normal 16px / 1.5em 'Open Sans',Helvetica,Arial,sans-serif;
+		font-weight: 600;
+		letter-spacing: 1px;
+	}
+	/*  Header har en egen container (.top-menu) som i sin tur 
+		innehåller allting*/
+	
+	header {
+		width: 100%;    
+		position: fixed;
+		top: 0;
+		z-index: 1;
+	}
+	
+	.top-menu {
+		display: flex;
+	}
+	
+	/* Vänster sida av headern. */
+	.leftnav {
+		flex-grow: 1;
+	}
+	
+	.nav-left-options {
+		background-color: #444059;
+		display: flex;
+		list-style-type: none;
+		padding: 0;
+		align-items: center;
+		margin: 0%;
+	}
+	
+	/* En container som logotypen och "Start" bor i tillsammans med
+		"Meny" och hamburgar-ikonet i mobilt läge.*/
+	
+	.logo-start {
+		align-items: inherit; 
+		display: flex;
+	}
+	
+	.home {
+		display: flex;
+		padding: 4px;    
+	}
+	
+	.itslogo {
+		height: 32px;
+		width: 32px;
+		margin: 0 0 0 12px ;
+	}
+	
+	
+	.start {
+		color: #fff !important;
+		padding: 16px 12px;
+		cursor: pointer;	
+	}
+	
+	.active-shadow {
+		background-color: #fff;
+		height: 3px;
+		width: 30px;
+		border-radius: 4px 4px;
+		position: absolute;
+		bottom: 0%;
+		margin-left: 68px;
+		cursor: pointer;
+	}
+	
+	
+	.navkurserbtn {
+		color: #b4b3bd;
+		cursor: pointer;
+		background-color: transparent;
+		padding: 20px 14px;
+		border: none;
+	}
+	
+	/* Denna selektor står tom men jag lämnar den i en kommentar
+		som en represetant för headerns högra sida.
+	
+		.rightnav {
+			
+		}
+		*/
+	
+	.nav-right-options {
+		background-color: #444059;
+		display: flex;
+		padding: 0 18px 0 0;
+		margin: 0;
+	}
+	
+	.bell {
+		height: 64px;
+		display: flex;
+		padding: 0 4px 0 0;
+	}
+	
+	/* Här har jag valt att ha dessa två klasser nära varandra
+		då "i" endast är en hover-funktion över ikonet som jag
+		lagt in från FontAwesome. */
+	
+	i:hover {
+		color: #fff;
+	}
+	.bell-btn {
+		background-color: transparent;
+		cursor: pointer;
+		color: #b4b3bd;
+		height: 38px;
+		width: 38px;
+		border: 2px solid rgba(255,255,255,0.3);
+		border-radius: 100px;
+		margin: 13px 0 0 0px;
+	}
+	
+	/* Button-funktion med en dropdown-meny för inloggad användare. */
+	
+	.user {
+		display: flex;
+	
+	}
+	
+	.user-btn {
+		background-color: transparent;
+		cursor: pointer;
+		padding: 12px 5px;
+		border: none;
+	}
+	
+	.logo-user {
+		display: flex;
+		align-items: center;
+	}
+	
+	.profilepic {
+		width: 35px;
+		border: 2px solid #b4b3bd;
+		border-radius: 100px;
+	}
+	
+	.username {
+		color: #fff !important;
+		padding: 0 0 0 5px;
+	}
+	
+	
+	/* Eftersom att vi gjorde misstaget att börja jobba från en desktop-vy,
+		behvöde jag en extra media-query för att behålla desktop-responsiviteten. */
+	
+	@media screen and (min-width: 600px) {
+		.mer-arrow, .mer-btn, .nav-menu {
+			display: none;
+		}
+		
+	}
+	
+	@media screen and (max-width: 600px)  {
+		.username, 
+		.start, 
+		.active-shadow, 
+		.navkurserbtn,
+		.mer-btn,
+		.mer-arrow {
+			display: none;
+	
+		}
+	
+		.mobile-burger {
+			display: flex;
+			flex-direction: column;
+			height: 64px;
+			width: 100%;
+			justify-content: center;
+			padding-right: 2px ;
+		
+		}
+		
+		.burger {
+			background-color: #b4b3bd;
+			width: 28px;
+			height: 4px;
+			margin: 2px;
+		}
+		
+		.nav-menu {
+			display: flex;
+			padding: 5px;
+		}
+	}

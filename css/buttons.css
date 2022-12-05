@@ -1,0 +1,99 @@
+/* Desktop layout.*/
+
+/* Stylar hela nav:en.*/
+.nav-container {
+	background-image: linear-gradient(to bottom, #38354A 0%, #554F66);
+	width: 100%;
+	padding: 20px 0 20px 0;
+	margin-top: 64px;
+}
+
+/* Placerar knapparna och ser till att de får rätt avstånd mellan varandra.*/
+.container-btns {
+	display: flex;
+	justify-content: center;
+}
+
+.container-kurser {
+   border: 3px solid transparent;
+	margin: 0 15px;
+}
+
+.container-uppdateringar {
+	border: 3px solid transparent;
+	margin: 0 15px;
+}
+
+
+/* Styling till Kurser-knappen.*/
+.kurser-btn {
+	background-color: #f2f0f5;
+	border: 2px solid #c6bec4;
+	border-radius: 24px;
+	color: #756372;
+	font-size: 16px;
+	font-weight: 700;
+	padding: 10px 30px;
+	cursor: pointer;
+	font-family: "Lato",Helvetica,Arial,sans-serif;
+}
+
+.kurser-btn:active {
+	outline: 3px solid #ccd7ff;
+	outline-offset: 2px;
+}
+
+
+/* Styling till Uppdateringar-knappen.*/
+.uppdateringar-btn {
+	background-color: #444059;
+	border: 2px solid #fff;
+	border-radius: 24px;
+	color: #fff;
+	font-size: 16px;
+	font-weight: 600;
+	padding: 10px 30px;
+	cursor: pointer;
+	font-family: "Lato",Helvetica,Arial,sans-serif;
+}
+
+.uppdateringar-btn:hover {
+	background-color: #554F66;
+}
+
+.uppdateringar-btn:active {
+	outline: 3px solid #ccd7ff;
+	outline-offset: 2px;
+}
+
+
+
+/* Mobile.*/
+@media screen and (max-width: 568px) {
+
+/* Positionerar knapparna rätt i nav-baren.*/
+.container-btns {
+	flex-direction: column;
+	align-items: center;
+}
+
+.kurser-btn {
+	padding-top: 12px;
+}
+
+/* Ser till att Uppdateringar-knappen får rätt knapp i Mobile-läget.*/
+.uppdateringar-btn {
+	background-color: #444059;
+	margin-top: 5px;
+	padding-top: 10px;
+}
+
+.uppdateringar-btn:active {
+	background-color: #2f0df1 ;
+}
+
+.uppdateringar-btn:hover {
+	background-color: #6a6681;
+}
+
+}
